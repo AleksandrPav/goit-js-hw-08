@@ -8,4 +8,4 @@ var t=arguments[3];function e(t){return(e="function"==typeof Symbol&&"symbol"==t
 },{}],"TfQ5":[function(require,module,exports) {
 "use strict";var e=require("./gallery-items"),l=a(require("simplelightbox"));function a(e){return e&&e.__esModule?e:{default:e}}require("simplelightbox/dist/simple-lightbox.min.css"),console.log(e.galleryItems);const r={galleryContainer:document.querySelector(".gallery"),cardsMarkup:i(e.galleryItems)};function i(e){return e.map(({preview:e,original:l,description:a})=>`<li class="gallery__item">\n    <a class="gallery__item" href="${l}">\n  <img class="gallery__image" src="${e}" alt="${a}" />\n</a>\n</li>`).join("")}r.galleryContainer.insertAdjacentHTML("afterbegin",r.cardsMarkup),r.galleryContainer=new l.default(".gallery a",{captionDelay:250,captionsData:"alt"}),console.log(e.galleryItems);
 },{"./gallery-items":"q5Rn","simplelightbox":"yx6k","simplelightbox/dist/simple-lightbox.min.css":"kz9M"}]},{},["TfQ5"], null)
-//# sourceMappingURL=/aleksandrpav.github.io/goit-js-hw-08.git/01-gallery.75589fdd.js.map
+//# sourceMappingURL=/github.io/goit-js-hw-08/01-gallery.75589fdd.js.map
