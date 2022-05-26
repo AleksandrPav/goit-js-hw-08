@@ -1,7 +1,8 @@
 import Player from '@vimeo/player';
 
-const iframe = document.querySelector('iframe');
-    const player = Player(iframe);
+
+const player = new Player('vimeo-player');
+
 
     player.on('play', function() {
         console.log('played the video!');
@@ -14,3 +15,5 @@ const iframe = document.querySelector('iframe');
     const onPlay = function(data) {
     // data is an object containing properties specific to that event
 };
+
+player.on('play', onPlay);
