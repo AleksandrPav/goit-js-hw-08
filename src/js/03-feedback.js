@@ -23,14 +23,15 @@ function handleFormInput (e) {
 function handleFormSubmit(e) {
   console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   e.preventDefault();
-  e.currentTarget.reset();
+  e.target.reset();
   localStorage.removeItem(STORAGE_KEY);
+  
 }
 
 function dataFromLocalStorage() {
    const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
   if (data) {
-    refs.email.value = data.email;
-    refs.message.value = data.message;
+    refs.email.value = data.email.value || '';
+    refs.message.value = data.message.value || '';
   }
 };
