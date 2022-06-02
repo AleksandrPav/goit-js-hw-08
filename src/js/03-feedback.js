@@ -15,15 +15,13 @@ const STORAGE_KEY = 'feedback-form-state';
 
 dataFromLocalStorage()
 
-function handleFormInput (e) {
- 
-  const value = {
+function handleFormInput() {
+  const data = {
     email: refs.email.value,
     message: refs.message.value,
   }
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
- 
-}
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+};
 
 function handleFormSubmit(e) {
   e.preventDefault();
